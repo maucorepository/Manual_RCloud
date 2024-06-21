@@ -206,15 +206,8 @@ ofrece la plataforma.
 
 Para aquellos usuarios que requieran extender el plazo de su sesión en RCloud
 más allá de los seis meses iniciales, se ha establecido un proceso de solicitud
-de extensión. Esta solicitud debe realizarse mediante correo electrónico
-dirigido al departamento de soporte técnico de MAUCO. En el correo electrónico
-de solicitud de extensión, los usuarios deben proporcionar una justificación
-clara y detallada sobre la necesidad de prolongar su acceso a RCloud, así como
-cualquier información adicional relevante para su solicitud.
+de extensión. Esta solicitud debe realizarse enviando un correo electrónico al administrador de bases de datos MAUCO *(cristian.herrera@uc.cl)* solicitando el **documento de enmienda de uso de variables de la cohorte MAUCO**.
 
-El departamento de soporte técnico evaluará cada solicitud de extensión de
-manera individual y se esforzará por proporcionar una respuesta oportuna a los
-usuarios solicitantes. Se recomienda a los usuarios que anticipen la necesidad
-de extender su sesión en RCloud que inicien el proceso de solicitud con
-suficiente antelación para garantizar una continuidad sin interrupciones en su
-trabajo.
+En la enmienda deben especificar los nuevos periodos de extensión, acompañados de una justificación detallada y del impacto esperado de dicha extensión, en caso de que aplique.
+
+El departamento de datos evaluará su solicitud de extensión y se esforzará por proporcionar una respuesta oportuna a los usuarios solicitantes. Se recomienda a los usuarios que anticipen la necesidad de extender su sesión en RCloud, para que inicien el proceso de solicitud con suficiente antelación para garantizar una continuidad sin interrupciones en su trabajo.

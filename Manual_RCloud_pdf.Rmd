@@ -1,29 +1,24 @@
 ---
+title: "Manual RStudio Cloud"
 author: "MAUCO"
-date: "2024-04-09"
-output:
+date: "Versión 1, 2024-06-21"
+output: 
   pdf_document:
     toc: true
-    toc_depth: '2'
-  # html_document:
-  #   highlight: zenburn
-  #   code_folding: hide
-  #   toc: true
-  #   toc_float:
-  #     collapsed: true
-  #     smooth_scroll: true
-  #   toc_depth: 2
-  #   number_sections: true
-  #   css: styles.css
-  #   theme: lumen
+    toc_depth: 2
+    number_sections: true
+toc-title: "Índice"
+lang: "es"
 ---
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+\newpage
 
-# **Manual básico de R**
+# **Finalidad del manual**
 
 Este manual tiene como finalidad ser una guía básica del uso del ambiente Rstudio cloud para los investigadores y/o colaboradores que han solicitado datos pertenecientes a la *Cohorte MAUCO*.
 
@@ -51,8 +46,8 @@ El entorno de trabajo de RStudio Cloud se subdivide en una serie de secciones o 
 **4. La consola**  
 **5. Paneles de archivos (files) y gráficos (plots)**  
 
-```{r entorno, echo=FALSE, fig.align = 'center', fig.cap="Figura 3.1: Entorno de trabajo RStudio Cloud.  \n1. Barra de tareas, 2. Editor de Scripts, 3. Paneles de ambiente e historial, 4. Consola, 5. Paneles de archivos y gráficos.", out.width = '2000px'}
-knitr::include_graphics("images/entorno_num.png")
+```{r entorno, echo=FALSE, fig.align = 'center', fig.cap="Figura 3.1: Entorno de trabajo RStudio Cloud.  \n1. Barra de tareas, 2. Editor de Scripts, 3. Paneles de ambiente e historial, 4. Consola, 5. Paneles de archivos y gráficos.", out.width = '100%'}
+ knitr::include_graphics("images/entorno_num.png")
 ```
 
 ## Barra de tareas
@@ -188,8 +183,8 @@ library(dplyr)
 
 R permite identificar el uso actual de memoria RAM de su ambiente de trabajo. Para esto dirígase a la pestaña **Environment** y seleccione la opción **Memory usage report...** en el icono de gráfico de torta, lo cual abrira un resumen del uso de memoria de su sesión de R como se muestra en la **Figura 6.1**.
 
-```{r memoria, echo=FALSE, fig.align = 'center', fig.cap="Figura 6.1: Uso de memoria asociada a su sesión de trabajo en R", out.width = '800px'}
-knitr::include_graphics("images/gif_memoria.gif")
+```{r memoria, echo=FALSE, fig.align = 'center', fig.cap="Figura 6.1: Uso de memoria asociada a su sesión de trabajo en R", out.width = '60%'}
+knitr::include_graphics("images/uso_memoria.png")
 ```
 
 Este uso de memoria corresponde aproximadamente a la suma del tamaño de todos los objetos de R en el entorno global, más las librerias que se han cargado y la sobrecarga interna de R. 

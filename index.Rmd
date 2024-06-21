@@ -1,19 +1,18 @@
 ---
 author: "MAUCO"
 date: "2024-04-09"
-title: "Manual_RCloud"
 output:
   html_document:
+    highlight: zenburn
+    code_folding: hide
     toc: true
-    toc_float:
-      collapsed: false
-      smooth_scroll: false
+    toc_float: 
+       collapsed: true
+       smooth_scroll: true
     toc_depth: 2
     number_sections: true
+    css: styles.css
     theme: lumen
-  pdf_document:
-    toc: true
-    toc_depth: '2'
 ---
 
 ```{r setup, include=FALSE}
@@ -21,11 +20,11 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-# **Manual básico de R.**
+# **Manual básico de R**
 
 Este manual tiene como finalidad ser una guía básica del uso del ambiente Rstudio cloud para los investigadores y/o colaboradores que han solicitado datos pertenecientes a la *Cohorte MAUCO*.
 
-# **Inicio de Sesión en la plataforma.**
+# **Inicio de Sesión en la plataforma**
 
 
 Para iniciar sesión en RStudio Cloud, sigue estos pasos:
@@ -39,7 +38,7 @@ Para iniciar sesión en RStudio Cloud, sigue estos pasos:
 4. Si la información de inicio de sesión son correctos, se te dirigirá a tu espacio de trabajo en RStudio Cloud, donde podrás acceder a tus proyectos y comenzar a trabajar con los datos solicitados.
 
 
-# **Entorno RStudio Cloud.**
+# **Entorno RStudio Cloud**
 
 El entorno de trabajo de RStudio Cloud se subdivide en una serie de secciones o regiones, las cuales se enlistan a continuación y pueden visualizarse en la **Figura 3.1**.
 
@@ -53,7 +52,7 @@ El entorno de trabajo de RStudio Cloud se subdivide en una serie de secciones o 
 knitr::include_graphics("images/entorno_num.png")
 ```
 
-## **Barra de tareas.**
+## Barra de tareas
 
 La barra de herramientas de RStudio se encuentra en la parte superior de la interfaz y proporciona acceso rápido a diversas funciones y herramientas útiles para trabajar con R y proyectos de análisis de datos. A continuación, se presenta una descripción de las principales opciones que puedes encontrar en la barra de tareas:
 
@@ -74,7 +73,7 @@ La barra de herramientas de RStudio se encuentra en la parte superior de la inte
 
 - Help (Ayuda): Te proporciona acceso rápido a la documentación y ayuda relacionada con R y RStudio, incluyendo enlaces a la documentación oficial, foros de ayuda y recursos adicionales.
 
-## **Editor de scripts.**
+## Editor de scripts
 
 El editor de scripts (Source) en RStudio Cloud es una herramienta central para escribir, editar y ejecutar código en R. 
 
@@ -82,7 +81,7 @@ Con el editor de scripts, podras crear y modificar archivos de script (.R) de ma
 
 En resumen, el editor de scripts en RStudio Cloud es una herramienta que facilita el desarrollo y la ejecución de código en R, proporcionando un entorno intuitivo y funcional para trabajar en proyectos de análisis de datos y estadísticas.
 
-## **Ambiente e historial.**
+## Ambiente e historial
 
 El Ambiente (Environment) y el Historial (History) son dos paneles importantes que ofrecen información y funcionalidades clave para el desarrollo de proyectos en R. 
 
@@ -90,23 +89,23 @@ El panel Ambiente (Environment) muestra información sobre las **variables** y *
 
 El panel Historial (History) registra los comandos que han sido ejecutados en la sesión actual de R. Muestra una lista cronológica de los comandos previamente ingresados por el usuario, junto con los resultados correspondientes si los hubiera. Esto facilita la revisión y reproducción de acciones previas, lo que puede ser útil para recordar pasos específicos.
 
-## **Consola.**
+## Consola
 
 La consola en RStudio Cloud es el espacio interactivo donde puedes escribir y ejecutar comandos de R en tiempo real. Es el lugar donde se muestra la salida de los comandos y los mensajes de error, lo que permite a los usuarios interactuar directamente con el lenguaje de programación R.
 
-## **Archivos y gráficos.**
+## Archivos y gráficos
 
 El panel de archivos (files) proporciona una interfaz visual para explorar y gestionar los archivos y directorios en tu proyecto. Te permite navegar por la estructura de archivos, crear nuevos archivos, importar scripts y organizar tu trabajo de manera eficiente. Además, este panel facilita la búsqueda y manipulación de archivos, lo que ayuda a los usuarios a mantener sus proyectos organizados y bien estructurados.
 
 Por otro lado, el panel de gráficos (plots) muestra los gráficos y visualizaciones generados durante tu sesión de R. Es un espacio dedicado para explorar y examinar tus resultados visuales de manera interactiva. Desde este panel, puedes visualizar gráficos y exportar imágenes.
 
-# **Carga de base de datos en el espacio de trabajo.**
+# **Carga de base de datos en el espacio de trabajo**
 
 Luego de haber iniciado a tu sesión de RStudio CLoud, deberas identificar en el panel de archivos (files) la base datos con la cual realizarás tus futuros análisis. Las bases de datos pueden encontrarse en un sin fin de extensiones de archivos. 
 
 A continuación se explicara como cargar la base de datos en el espacio de trabajo (panel environment) para las extensiones de archivos más utilizadas.
 
-## **Base de datos en archivo con extensión _.RData_**
+## Base de datos en archivo con extensión _.RData_
 
 La extensión `.RData` es una extensión de archivos propia del lenguaje R. Este archivo permite almacenar distintos objetos de R en un solo archivo. En terminos generales, 
 todos los elementos que maneja R son objetos, dentro de los cuales pueden ser:
@@ -127,7 +126,7 @@ load("nombre_archivo.Rdata")
 
 Así, todos los objetos almacenados en su archivo `.RData`seran cargados en su espacio de trabajo.
 
-## **Base de datos en archivo con extensión _.csv_**
+## Base de datos en archivo con extensión _.csv_
 
 Si dispone de un archivo con extensión `.csv` en su panel de archivos, podra cargarlo en su espacio de trabajo con la función `read.csv()`.
 
@@ -144,7 +143,7 @@ knitr::kable(head(db_penguins), caption = "Base de datos penguins desde archivo 
 
 La base de datos se almacena en el objeto `db_penguins`. Además, se utilizan tres argumentos de la función `read.csv()`. El argumento `file` permite indicarle a la función la ruta del archivo dentro de nuestro directorio de trabajo. El argumento `header` permite indicarle a la función que nuestra base de datos disponde de encabezados de columna, utilizando un valor booleano T (True). Finalmente, el argumento `sep` permite indicar el signo empleado para la separación de valores dentro del archivo csv.
 
-## **Base de datos en archivo con extensión _.xlsx_**
+## Base de datos en archivo con extensión _.xlsx_
 
 Para cargar una base de datos con la extensión `.xlsx`, se recomienda el uso de la función `read_xlsx()` de la libreria `readxl`.
 
@@ -163,7 +162,7 @@ knitr::kable(head(db_penguins), caption = "Base de datos penguins desde archivo 
 
 La base de datos se almacena en el objeto `db_penguins`. Además, se utilizan dos argumentos de la función `read_xlsx()`. El argumento `path` permite indicarle a la función la ubicación del archivo dentro del directorio de trabajo. El argumento `sheet` permite especificar el nombre de la hoja del libro en la cual esta almacenada la base de datos.
 
-# **Librerias.**
+# **Librerias**
 
 En R, una "librería" (o "paquete") es un conjunto de funciones y datos que extienden la funcionalidad básica del lenguaje. Estas librerías son creadas por desarrolladores de la comunidad de R y pueden contener herramientas para una amplia gama de tareas, como análisis estadístico, visualización de datos, manipulación de datos, modelado predictivo y más.
 
@@ -198,14 +197,24 @@ Es posible liberar una porción de memoria del espacio de trabajo cuando no se e
 
 2. Luego, utilizar la opción **Restart R** la cual se encuentra dentro de la opción **Session** en la barra de tareas, la cual liberara el espacio de memoria de los objetos del espacio de trabajo.
 
+# **Duración y extensión de la sesión en RCloud para investigadores y colaboradores de MAUCO**
 
-<!-- ## Tab setting {.tabset .tabset-fade .tabset-pills} -->
+La sesión de acceso a RCloud, brindada a los investigadores y colaboradores de
+MAUCO, tiene una duración inicial de seis meses. Durante este periodo, los
+usuarios tienen la oportunidad de aprovechar las herramientas y recursos que
+ofrece la plataforma.
 
-<!-- ### By Product -->
+Para aquellos usuarios que requieran extender el plazo de su sesión en RCloud
+más allá de los seis meses iniciales, se ha establecido un proceso de solicitud
+de extensión. Esta solicitud debe realizarse mediante correo electrónico
+dirigido al departamento de soporte técnico de MAUCO. En el correo electrónico
+de solicitud de extensión, los usuarios deben proporcionar una justificación
+clara y detallada sobre la necesidad de prolongar su acceso a RCloud, así como
+cualquier información adicional relevante para su solicitud.
 
-<!-- (tab content) -->
-
-<!-- ### By Region -->
-
-<!-- (tab content) -->
-
+El departamento de soporte técnico evaluará cada solicitud de extensión de
+manera individual y se esforzará por proporcionar una respuesta oportuna a los
+usuarios solicitantes. Se recomienda a los usuarios que anticipen la necesidad
+de extender su sesión en RCloud que inicien el proceso de solicitud con
+suficiente antelación para garantizar una continuidad sin interrupciones en su
+trabajo.

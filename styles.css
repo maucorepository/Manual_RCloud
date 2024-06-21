@@ -1,0 +1,13 @@
+body {
+  font-size: 16px;
+  text-align: justify;
+}
+
+#TOC {
+  position: fixed;
+  left: 30px;
+  width: 440px;
+  max-width:23%;
+  overflow:auto;
+  padding: 10px;
+}

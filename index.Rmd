@@ -2,20 +2,17 @@
 author: "MAUCO"
 date: "2024-04-09"
 output:
-  pdf_document:
+  html_document:
+    highlight: zenburn
+    code_folding: hide
     toc: true
-    toc_depth: '2'
-  # html_document:
-  #   highlight: zenburn
-  #   code_folding: hide
-  #   toc: true
-  #   toc_float:
-  #     collapsed: true
-  #     smooth_scroll: true
-  #   toc_depth: 2
-  #   number_sections: true
-  #   css: styles.css
-  #   theme: lumen
+    toc_float:
+      collapsed: true
+      smooth_scroll: true
+    toc_depth: 2
+    number_sections: true
+    css: styles.css
+    theme: lumen
 ---
 
 ```{r setup, include=FALSE}
